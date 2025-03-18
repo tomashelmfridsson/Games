@@ -13,6 +13,9 @@ public class FirstTo21 {
         String reset = "\u001B[0m";
         String bold = "\u001B[1m";
 
+        boolean taunt10 = false;
+        boolean taunt18 = false;
+
         System.out.println("""
                 Välkommen till spelet! Den som säger 21 vinner.
                 Vi singlar slant om vem som börjar du är krona!
@@ -36,6 +39,20 @@ public class FirstTo21 {
                 System.out.println(green +"Du sa: " + move +reset);
                 System.out.println(bold+"Ställningen är: " + currentNumber+reset);
 
+                if (currentNumber >= 10 && currentNumber < 13 && !taunt10) {
+                    String taunt = (red + "Datorn: Haha, detta är bara uppvärmning!" + reset);
+                    for (int i = 0; i < taunt.length(); i++) {
+                        System.out.print(taunt.charAt(i));
+                        try {
+                            Thread.sleep(150);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    System.out.println();
+                    taunt10 = true;
+                }
+
                 if (currentNumber >= 21) {
                     System.out.println(green +"Grattis! Du vinner!"+reset);
                     break;
@@ -55,6 +72,11 @@ public class FirstTo21 {
             currentNumber += computerMove;
             System.out.println(red + "Datorn väljer: " + computerMove + reset);
             System.out.println(bold+"Ställningen är: " + currentNumber+reset);
+
+            if (currentNumber >= 20 && currentNumber < 21 && !taunt18) {
+                System.out.println(red + "Datorn: Det är omöjligt för dig att vinna nu!" + reset);
+                taunt18 = true;
+            }
 
             if (currentNumber >= 21) {
                 System.out.println(red +"Datorn vinner! Bättre lycka nästa gång." + reset);
