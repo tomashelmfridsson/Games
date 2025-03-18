@@ -11,6 +11,7 @@ public class FirstTo21 {
         String red = "\u001B[31m";
         String green = "\u001B[32m";
         String reset = "\u001B[0m";
+        String bold = "\u001B[1m";
 
         System.out.println("""
                 Välkommen till spelet! Den som säger 21 vinner.
@@ -33,7 +34,7 @@ public class FirstTo21 {
                 }
                 currentNumber += move;
                 System.out.println(green +"Du sa: " + move +reset);
-                System.out.println("Ställningen är: " + currentNumber);
+                System.out.println(bold+"Ställningen är: " + currentNumber+reset);
 
                 if (currentNumber >= 21) {
                     System.out.println(green +"Grattis! Du vinner!"+reset);
@@ -43,7 +44,7 @@ public class FirstTo21 {
             int computerMove = random.nextInt(2) + 1;
             currentNumber += computerMove;
             System.out.println(red + "Datorn väljer: " + computerMove + reset);
-            System.out.println("Ställningen är: " + currentNumber);
+            System.out.println(bold+"Ställningen är: " + currentNumber+reset);
 
             if (currentNumber >= 21) {
                 System.out.println(red +"Datorn vinner! Bättre lycka nästa gång." + reset);
