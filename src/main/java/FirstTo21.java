@@ -5,6 +5,8 @@ public class FirstTo21 {
         Scanner scanner = new Scanner(System.in);
         int currentNumber = 0;
 
+        System.out.println("Witness me! Ibrahim was here!!");
+
         System.out.println("Välkommen till spelet! Den som säger 21 vinner.");
         System.out.println("Du börjar!");
 
