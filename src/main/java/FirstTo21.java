@@ -41,6 +41,16 @@ public class FirstTo21 {
                     break;
                 }
             }
+            System.out.print(red + "Datorn tänker");
+            for (int i = 0; i < 3; i++) {
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                System.out.print(".");
+            }
+            System.out.println(reset);
             int computerMove = random.nextInt(2) + 1;
             currentNumber += computerMove;
             System.out.println(red + "Datorn väljer: " + computerMove + reset);
