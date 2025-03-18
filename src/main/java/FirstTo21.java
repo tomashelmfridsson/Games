@@ -22,7 +22,7 @@ public class FirstTo21 {
             System.out.println("Du sa: " + currentNumber);
 
             if (currentNumber >= 21) {
-                System.out.println("Grattis! Du vinner!");
+                System.out.println("Grattis! Du vann!");
                 break;
             }
 
@@ -31,7 +31,7 @@ public class FirstTo21 {
             System.out.println("Datorn säger: " + currentNumber);
 
             if (currentNumber >= 21) {
-                System.out.println("Datorn vinner! Bättre lycka nästa gång.");
+                System.out.println("Datorn vann!! Bättre lycka nästa gång");
                 break;
             }
         }
