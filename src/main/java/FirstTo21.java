@@ -12,7 +12,7 @@ public class FirstTo21 {
 
         while (true) {
             int playerMove = 0;
-            while (playerMove != 1 && playerMove != 2) {
+            while (playerMove != 1 && playerMove != 3) {
                 System.out.print("Säg 1 eller 2: ");
                 playerMove = scanner.nextInt();
                 if (playerMove != 1 && playerMove != 2) {
