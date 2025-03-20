@@ -21,7 +21,7 @@ public class FirstTo21 {
 
         System.out.println("""
                 Välkommen till spelet! Den som säger 21 vinner.
-                Vi singlar slant om vem som börjar du är krona!
+                Vi singlar slant om vem som börjar, du är krona!
                 """);
         int playerMove = random.nextInt(2) + 1;
         if (playerMove == 1) {
@@ -47,7 +47,7 @@ public class FirstTo21 {
                     for (int i = 0; i < taunt.length(); i++) {
                         System.out.print(taunt.charAt(i));
                         try {
-                            Thread.sleep(150);
+                            Thread.sleep(100);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -70,16 +70,24 @@ public class FirstTo21 {
                 }
                 System.out.print(".");
             }
-            System.out.println(reset);
-            int computerMove = random.nextInt(2) + 1;
-            currentNumber += computerMove;
-            System.out.println(red + "Datorn väljer: " + computerMove + reset);
-            System.out.println(bold+"Ställningen är: " + currentNumber+reset);
 
-            if (currentNumber >= 20 && currentNumber < 21 && !taunt18) {
+            if (currentNumber >= 19 && currentNumber < 21 && !taunt18) {
+                System.out.println();
                 System.out.println(red + "Datorn: Det är omöjligt för dig att vinna nu!" + reset);
                 taunt18 = true;
             }
+            System.out.println(reset);
+            if (currentNumber<19) {
+                int computerMove = random.nextInt(2) + 1;
+                currentNumber += computerMove;
+                System.out.println(red + "Datorn väljer: " + computerMove + reset);
+                System.out.println(bold + "Ställningen är: " + currentNumber + reset);
+            }else {
+                currentNumber = currentNumber + 2;
+                System.out.println(red + "Datorn väljer: 2" + reset);
+                System.out.println(bold + "Ställningen är: " + currentNumber + reset);
+            }
+
 
             if (currentNumber >= 21) {
                 System.out.println("Datorn vann!! Bättre lycka nästa gång");
