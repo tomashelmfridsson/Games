@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class FirstTo21 {
@@ -7,6 +6,10 @@ public class FirstTo21 {
         Random random = new Random();
         int currentNumber = 0;
 
+        System.out.println("Witness me! Ibrahim was here!!");
+
+        System.out.println("Välkommen till spelet! Den som säger 21 vinner.");
+        System.out.println("Du börjar!");
             //spelpjäser
         String red = "\u001B[31m";
         String green = "\u001B[32m";
@@ -79,7 +82,7 @@ public class FirstTo21 {
             }
 
             if (currentNumber >= 21) {
-                System.out.println(red +"Datorn vinner! Bättre lycka nästa gång." + reset);
+                System.out.println("Datorn vann!! Bättre lycka nästa gång");
                 break;
             }
             playerMove=1;
